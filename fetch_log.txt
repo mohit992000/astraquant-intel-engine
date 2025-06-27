@@ -1,0 +1,69 @@
+2025-06-25 11:52:48,135 - INFO - Fetching latest bar for SPY at 2025-06-25 15:52:48 UTC...
+2025-06-25 11:52:48,340 - ERROR - 
+1 Failed download:
+2025-06-25 11:52:48,340 - ERROR - ['SPY']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:52:48,351 - WARNING - No recent data for SPY
+2025-06-25 11:52:48,351 - INFO - Fetching latest bar for NQ=F at 2025-06-25 15:52:48 UTC...
+2025-06-25 11:52:48,537 - ERROR - 
+1 Failed download:
+2025-06-25 11:52:48,537 - ERROR - ['NQ=F']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:52:48,542 - WARNING - No recent data for NQ=F
+2025-06-25 11:52:48,543 - INFO - Fetching latest bar for BTC-USD at 2025-06-25 15:52:48 UTC...
+2025-06-25 11:52:48,801 - ERROR - 
+1 Failed download:
+2025-06-25 11:52:48,802 - ERROR - ['BTC-USD']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:52:48,806 - WARNING - No recent data for BTC-USD
+2025-06-25 11:52:48,806 - INFO - Sleeping 60 seconds...
+
+2025-06-25 11:53:48,814 - INFO - Fetching latest bar for SPY at 2025-06-25 15:53:48 UTC...
+2025-06-25 11:53:48,942 - ERROR - 
+1 Failed download:
+2025-06-25 11:53:48,942 - ERROR - ['SPY']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:53:48,947 - WARNING - No recent data for SPY
+2025-06-25 11:53:48,949 - INFO - Fetching latest bar for NQ=F at 2025-06-25 15:53:48 UTC...
+2025-06-25 11:53:49,024 - ERROR - 
+1 Failed download:
+2025-06-25 11:53:49,024 - ERROR - ['NQ=F']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:53:49,028 - WARNING - No recent data for NQ=F
+2025-06-25 11:53:49,029 - INFO - Fetching latest bar for BTC-USD at 2025-06-25 15:53:49 UTC...
+2025-06-25 11:53:49,100 - ERROR - 
+1 Failed download:
+2025-06-25 11:53:49,101 - ERROR - ['BTC-USD']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:53:49,103 - WARNING - No recent data for BTC-USD
+2025-06-25 11:53:49,104 - INFO - Sleeping 60 seconds...
+
+2025-06-25 11:54:49,111 - INFO - Fetching latest bar for SPY at 2025-06-25 15:54:49 UTC...
+2025-06-25 11:54:49,840 - ERROR - 
+1 Failed download:
+2025-06-25 11:54:49,841 - ERROR - ['SPY']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:54:49,855 - WARNING - No recent data for SPY
+2025-06-25 11:54:49,855 - INFO - Fetching latest bar for NQ=F at 2025-06-25 15:54:49 UTC...
+2025-06-25 11:54:49,941 - ERROR - 
+1 Failed download:
+2025-06-25 11:54:49,941 - ERROR - ['NQ=F']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:54:49,945 - WARNING - No recent data for NQ=F
+2025-06-25 11:54:49,946 - INFO - Fetching latest bar for BTC-USD at 2025-06-25 15:54:49 UTC...
+2025-06-25 11:54:50,032 - ERROR - 
+1 Failed download:
+2025-06-25 11:54:50,033 - ERROR - ['BTC-USD']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:54:50,036 - WARNING - No recent data for BTC-USD
+2025-06-25 11:54:50,037 - INFO - Sleeping 60 seconds...
+
+2025-06-25 11:55:50,042 - INFO - Fetching latest bar for SPY at 2025-06-25 15:55:50 UTC...
+2025-06-25 11:55:50,117 - ERROR - 
+1 Failed download:
+2025-06-25 11:55:50,118 - ERROR - ['SPY']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:55:50,119 - WARNING - No recent data for SPY
+2025-06-25 11:55:50,119 - INFO - Fetching latest bar for NQ=F at 2025-06-25 15:55:50 UTC...
+2025-06-25 11:55:50,183 - ERROR - 
+1 Failed download:
+2025-06-25 11:55:50,183 - ERROR - ['NQ=F']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:55:50,184 - WARNING - No recent data for NQ=F
+2025-06-25 11:55:50,185 - INFO - Fetching latest bar for BTC-USD at 2025-06-25 15:55:50 UTC...
+2025-06-25 11:55:50,246 - ERROR - 
+1 Failed download:
+2025-06-25 11:55:50,247 - ERROR - ['BTC-USD']: YFPricesMissingError('possibly delisted; no price data found  (period=2m)')
+2025-06-25 11:55:50,249 - WARNING - No recent data for BTC-USD
+2025-06-25 11:55:50,249 - INFO - Sleeping 60 seconds...
+
+2025-06-25 11:55:56,643 - INFO - Stopped by user.

@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from datetime import timedelta
 
 class VolumeConfirmationEngine:
     def __init__(self, short_term_minutes=5, long_term_minutes=30, zscore_window=20):
@@ -15,48 +14,40 @@ class VolumeConfirmationEngine:
         return zscore
 
     def get_volume_ratio(self, df, short_window, long_window):
-        short_volume = df['volume'].rolling(f'{short_window}T').sum()
-        long_volume = df['volume'].rolling(f'{long_window}T').sum()
+        short_volume = df['volume'].rolling(window=short_window).sum()
+        long_volume = df['volume'].rolling(window=long_window).sum()
         volume_ratio = short_volume / (long_volume + 1e-9)
         return volume_ratio
 
     def detect_breakout(self, df, threshold=1.2):
-        short_term = df['price'].rolling(f'{self.short_term_minutes}T').mean()
-        long_term = df['price'].rolling(f'{self.long_term_minutes}T').mean()
+        short_term = df['price'].rolling(window=self.short_term_minutes).mean()
+        long_term = df['price'].rolling(window=self.long_term_minutes).mean()
         breakout = (short_term > long_term * threshold).astype(int)
         return breakout
 
     def run_analysis(self, df):
         """
-        Assumes df has columns: 'timestamp', 'price', 'volume'
+        Expects df with columns: 'timestamp', 'price', 'volume'
         """
         df = df.copy()
         df['timestamp'] = pd.to_datetime(df['timestamp'])
         df.set_index('timestamp', inplace=True)
-        df = df.resample('1T').agg({'price': 'last', 'volume': 'sum'}).dropna()
 
-        # Historical context (volume baseline)
+        # ✅ Use '1min' instead of deprecated '1T'
+        df = df.resample('1min').agg({'price': 'last', 'volume': 'sum'}).dropna()
+
         df['volume_zscore'] = self.calculate_zscore(df['volume'])
-
-        # Volume ratio (real-time comparison)
         df['volume_ratio'] = self.get_volume_ratio(df, self.short_term_minutes, self.long_term_minutes)
-
-        # Breakout confirmation using price momentum
         df['breakout'] = self.detect_breakout(df)
-
-        # Signal score
         df['score'] = df['volume_zscore'] * df['volume_ratio']
 
         return df[['price', 'volume', 'volume_zscore', 'volume_ratio', 'breakout', 'score']]
 
-# Example usage:
+# 🧪 Local test
 if __name__ == "__main__":
-    import pandas as pd
-    import numpy as np
     from datetime import datetime, timedelta
 
-    # Simulated 1-minute interval data for testing
-    timestamps = pd.date_range(end=datetime.now(), periods=60, freq='T')
+    timestamps = pd.date_range(end=datetime.now(), periods=60, freq='1min')
     prices = np.linspace(100, 130, 60) + np.random.normal(0, 1, 60)
     volumes = np.random.randint(1000, 3000, size=60)
 
@@ -69,4 +60,4 @@ if __name__ == "__main__":
     engine = VolumeConfirmationEngine()
     result = engine.run_analysis(test_df)
 
-    print(result.tail(10))  # Show last 10 rows of result
+    print(result.tail(10))
